@@ -1,0 +1,1 @@
+{"service": {"name": "web", "tags": ["fyh"], "port": 8080, "check": {"script": "service helloworld start", "interval": "10s"}}}
