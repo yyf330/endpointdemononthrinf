@@ -1,13 +1,12 @@
 [Unit]  
 Description=endpointdeamon  
-   
+
 [Service]  
 Type=forking  
-ExecStart=/usr/bin/python3.4 /home/wangdl/nodedeamon/endpointdeamon.py start
-ExecStop=/usr/bin/python3.4 /home/wangdl/nodedeamon/endpointdeamon.py stop
-KillMode=process 
-Restart=on-failure 
-RestartSec=20s
+ExecStart=/usr/bin/endpointdeamon.sh
+ExecStop=/usr/bin/endpointdeamon stop 
+Restart=on-failure
+RestartSec=6s
  
 [Install]  
 WantedBy=multi-user.target  
